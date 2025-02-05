@@ -1,6 +1,7 @@
 import reactLogo from './assets/react.svg';
 import viteLogo from './assets/vite.svg';
 import './App.css';
+import { Icon } from './../lib/components/Icons/Icon';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
+      <Icon icon="Calendar" />
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
     </>
   );

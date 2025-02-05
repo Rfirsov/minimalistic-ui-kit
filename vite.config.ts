@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import svgr from 'vite-plugin-svgr';
 import { extname, relative, resolve } from 'path';
 import dts from 'vite-plugin-dts';
 import { fileURLToPath } from 'node:url';
@@ -9,6 +10,7 @@ import { libInjectCss } from 'vite-plugin-lib-inject-css';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    svgr(),
     react(),
     libInjectCss(),
     dts({
