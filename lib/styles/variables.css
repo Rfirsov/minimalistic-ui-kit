@@ -24,32 +24,51 @@
   --font-weight-medium: 500;
   --font-weight-semi-bold: 600;
 
-  --font-size-13px: 0.8125rem;
+  --font-size-10px: 0.625rem;
+  --font-size-12px: 0.75rem;
   --font-size-14px: 0.875rem;
   --font-size-16px: 1rem;
   --font-size-18px: 1.125rem;
-  --font-size-20px: 1.25rem;
   --font-size-24px: 1.5rem;
+  --font-size-28px: 1.75rem;
   --font-size-32px: 2rem;
+  --font-size-40px: 2.5rem;
+  --font-size-48px: 3rem;
 
+  --line-height-12px: 0.75rem;
+  --line-height-14px: 0.875rem;
+  --line-height-16px: 1rem;
   --line-height-20px: 1.25rem;
-  --line-height-22px: 1.375rem;
   --line-height-24px: 1.5rem;
   --line-height-28px: 1.75rem;
-  --line-height-36px: 2.25rem;
+  --line-height-34px: 2.125rem;
+  --line-height-38px: 2.375rem;
+  --line-height-48px: 3rem;
+  --line-height-58px: 3.625rem;
 
-  --font-13-regular: var(--font-weight-regular) var(--font-size-13px)/var(--line-height-20px) var(--font-family-serif);
-  --font-13-medium: var(--font-weight-medium) var(--font-size-13px)/var(--line-height-20px) var(--font-family-serif);
-  --font-14-regular: var(--font-weight-regular) var(--font-size-14px)/var(--line-height-20px) var(--font-family-serif);
-  --font-14-medium: var(--font-weight-medium) var(--font-size-14px)/var(--line-height-20px) var(--font-family-serif);
-  --font-16-light: var(--font-weight-light) var(--font-size-16px)/var(--line-height-20px) var(--font-family-serif);
-  --font-16-regular: var(--font-weight-regular) var(--font-size-16px)/var(--line-height-20px) var(--font-family-serif);
-  --font-16-medium: var(--font-weight-medium) var(--font-size-16px)/var(--line-height-20px) var(--font-family-serif);
-  --font-16-bold: var(--font-weight-bold) var(--font-size-16px)/var(--line-height-24px) var(--font-family-serif);
-  --font-18-regular: var(--font-weight-regular) var(--font-size-18px)/var(--line-height-22px) var(--font-family-serif);
-  --font-18-medium: var(--font-weight-medium) var(--font-size-18px)/var(--line-height-22px) var(--font-family-serif);
-  --font-20-medium: var(--font-weight-medium) var(--font-size-20px)/var(--line-height-24px) var(--font-family-serif);
-  --font-24-regular: var(--font-weight-regular) var(--font-size-24px)/var(--line-height-28px) var(--font-family-serif);
-  --font-32-medium: var(--font-weight-medium) var(--font-size-32px)/var(--line-height-36px) var(--font-family-serif);
-  --font-32-bold: var(--font-weight-bold) var(--font-size-32px)/var(--line-height-36px) var(--font-family-serif);
+  --font-text-h1: var(--font-weight-semi-bold) var(--font-size-48px) / var(--line-height-58px) var(--font-family-serif);
+  --font-text-h2: var(--font-weight-semi-bold) var(--font-size-40px) / var(--line-height-48px) var(--font-family-serif);
+  --font-text-h3: var(--font-weight-semi-bold) var(--font-size-32px) / var(--line-height-38px) var(--font-family-serif);
+  --font-text-h4: var(--font-weight-semi-bold) var(--font-size-28px) / var(--line-height-34px) var(--font-family-serif);
+  --font-text-h5: var(--font-weight-semi-bold) var(--font-size-24px) / var(--line-height-28px) var(--font-family-serif);
+
+  --font-text-s1: var(--font-weight-semi-bold) var(--font-size-18px) / var(--line-height-28px) var(--font-family-serif);
+  --font-text-s2: var(--font-weight-semi-bold) var(--font-size-16px) / var(--line-height-24px) var(--font-family-serif);
+
+  --font-text-b1: var(--font-weight-regular) var(--font-size-16px) / var(--line-height-24px) var(--font-family-serif);
+  --font-text-b2: var(--font-weight-medium) var(--font-size-16px) / var(--line-height-24px) var(--font-family-serif);
+  --font-text-b3: var(--font-weight-regular) var(--font-size-14px) / var(--line-height-20px) var(--font-family-serif);
+  --font-text-b4: var(--font-weight-medium) var(--font-size-14px) / var(--line-height-20px) var(--font-family-serif);
+
+  --font-text-c1: var(--font-weight-regular) var(--font-size-12px) / var(--line-height-16px) var(--font-family-serif);
+  --font-text-c2: var(--font-weight-medium) var(--font-size-12px) / var(--line-height-16px) var(--font-family-serif);
+  --font-text-c3: var(--font-weight-medium) var(--font-size-10px) / var(--line-height-14px) var(--font-family-serif);
+
+  --font-text-label: var(--font-weight-medium) var(--font-size-12px) / var(--line-height-16px) var(--font-family-serif);
+
+  --font-button-giant: var(--font-weight-semi-bold) var(--font-size-18px) / var(--line-height-24px) var(--font-family-serif);
+  --font-button-large: var(--font-weight-semi-bold) var(--font-size-16px) / var(--line-height-20px) var(--font-family-serif);
+  --font-button-medium: var(--font-weight-semi-bold) var(--font-size-14px) / var(--line-height-16px) var(--font-family-serif);
+  --font-button-small: var(--font-weight-semi-bold) var(--font-size-12px) / var(--line-height-16px) var(--font-family-serif);
+  --font-button-tiny: var(--font-weight-semi-bold) var(--font-size-10px) / var(--line-height-12px) var(--font-family-serif);
 }
