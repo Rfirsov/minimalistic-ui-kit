@@ -18,12 +18,11 @@
   --c-warning: #fbc756;
   --c-error: #ba0000;
 
-  --font-family-serif: system-ui, -apple-system, 'Ubuntu', serif;
+  --font-family-serif: system-ui, -apple-system, 'Inter', serif;
 
-  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-bold: 700;
+  --font-weight-semi-bold: 600;
 
   --font-size-13px: 0.8125rem;
   --font-size-14px: 0.875rem;
