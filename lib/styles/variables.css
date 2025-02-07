@@ -1,22 +1,100 @@
 :root {
-  --c-primary: #116acc;
-  --c-secondary1: #182233;
-  --c-secondary2: #b3cee2;
-  --c-secondary3: #d9dde7;
-  --c-secondary4: #fd4e5d;
+  --c-primary-900: #212967;
+  --c-primary-800: #2b3587;
+  --c-primary-700: #3745af;
+  --c-primary-600: #4758e0;
+  --c-primary-500: #4e61f6;
+  --c-primary-400: #7181f8;
+  --c-primary-300: #8895f9;
+  --c-primary-200: #aeb6fb;
+  --c-primary-100: #c8cefc;
+  --c-primary-50: #edeffe;
+
   --c-black: #000;
+  --c-black-alpha-90: rgba(var(--c-black), 0.9);
+  --c-black-alpha-80: rgba(var(--c-black), 0.8);
+  --c-black-alpha-70: rgba(var(--c-black), 0.7);
+  --c-black-alpha-60: rgba(var(--c-black), 0.6);
+  --c-black-alpha-50: rgba(var(--c-black), 0.5);
+  --c-black-alpha-40: rgba(var(--c-black), 0.4);
+  --c-black-alpha-30: rgba(var(--c-black), 0.3);
+  --c-black-alpha-20: rgba(var(--c-black), 0.2);
+  --c-black-alpha-10: rgba(var(--c-black), 0.1);
+
   --c-white: #fff;
-  --c-gray-100: #1f2937;
-  --c-gray-200: #374151;
-  --c-gray-300: #4b5563;
-  --c-gray-400: #6b7280;
-  --c-gray-500: #9ca3af;
-  --c-gray-600: #d1d5db;
-  --c-gray-700: #f3f4f6;
-  --c-info: #a0c3ff;
-  --c-success: #76ca66;
-  --c-warning: #fbc756;
-  --c-error: #ba0000;
+  --c-white-alpha-90: rgba(var(--c-white), 0.9);
+  --c-white-alpha-80: rgba(var(--c-white), 0.8);
+  --c-white-alpha-70: rgba(var(--c-white), 0.7);
+  --c-white-alpha-60: rgba(var(--c-white), 0.6);
+  --c-white-alpha-50: rgba(var(--c-white), 0.5);
+  --c-white-alpha-40: rgba(var(--c-white), 0.4);
+  --c-white-alpha-30: rgba(var(--c-white), 0.3);
+  --c-white-alpha-20: rgba(var(--c-white), 0.2);
+  --c-white-alpha-10: rgba(var(--c-white), 0.1);
+
+  --c-grey-900: #131927;
+  --c-grey-800: #212936;
+  --c-grey-700: #394050;
+  --c-grey-600: #4d5461;
+  --c-grey-500: #6d717f;
+  --c-grey-400: #9ea2ae;
+  --c-grey-300: #d2d5db;
+  --c-grey-200: #e5e7ea;
+  --c-grey-100: #f3f4f6;
+  --c-grey-50: #f9fafb;
+
+  --c-green-900: #1c4d27;
+  --c-green-800: #256533;
+  --c-green-700: #308242;
+  --c-green-600: #3da755;
+  --c-green-500: #43b75d;
+  --c-green-400: #69c57d;
+  --c-green-300: #81cf92;
+  --c-green-200: #a9deb4;
+  --c-green-100: #c5e9cd;
+  --c-green-50: #ecf8ef;
+
+  --c-red-900: #641d1a;
+  --c-red-800: #832523;
+  --c-red-700: #a9302d;
+  --c-red-600: #d93e39;
+  --c-red-500: #ee443f;
+  --c-red-400: #f16965;
+  --c-red-300: #f4827e;
+  --c-red-200: #f7a9a7;
+  --c-red-100: #fac5c3;
+  --c-red-50: #fdecec;
+
+  --c-yellow-900: #6b4700;
+  --c-yellow-800: #8c5e00;
+  --c-yellow-700: #b57900;
+  --c-yellow-600: #e89b00;
+  --c-yellow-500: #ffaa00;
+  --c-yellow-400: #ffbb33;
+  --c-yellow-300: #ffc654;
+  --c-yellow-200: #ffd88a;
+  --c-yellow-100: #ffe5b0;
+  --c-yellow-50: #fff7e6;
+
+  --c-blue-900: #003f6b;
+  --c-blue-800: #00528c;
+  --c-blue-700: #006ab5;
+  --c-blue-600: #0088e8;
+  --c-blue-500: #0095ff;
+  --c-blue-400: #33aaff;
+  --c-blue-300: #54b8ff;
+  --c-blue-200: #8aceff;
+  --c-blue-100: #b0deff;
+  --c-blue-50: #e6f4ff;
+
+  --box-shadow-100: 0px 2px 4px -2px rgba(var(--c-grey-900), 0.12), 0px 4px 4px -2px rgba(var(--c-grey-900), 0.08);
+  --box-shadow-200: 0px 4px 6px -4px rgba(var(--c-grey-900), 0.12), 0px 8px 8px -4px rgba(var(--c-grey-900), 0.08);
+  --box-shadow-300: 0px 6px 8px -6px rgba(var(--c-grey-900), 0.12), 0px 8px 16px -6px rgba(var(--c-grey-900), 0.08);
+  --box-shadow-400: 0px 6px 12px -6px rgba(var(--c-grey-900), 0.12), 0px 8px 24px -4px rgba(var(--c-grey-900), 0.08);
+  --box-shadow-500: 0px 6px 14px -6px rgba(var(--c-grey-900), 0.12), 0px 10px 32px -4px rgba(var(--c-grey-900), 0.1);
+  --box-shadow-600: 0px 8px 18px -6px rgba(var(--c-grey-900), 0.12), 0px 12px 42px -4px rgba(var(--c-grey-900), 0.12);
+  --box-shadow-700: 0px 8px 22px -6px rgba(var(--c-grey-900), 0.12), 0px 14px 64px -4px rgba(var(--c-grey-900), 0.12);
+  --box-shadow-800: 0px 8px 28px -6px rgba(var(--c-grey-900), 0.12), 0px 18px 88px -4px rgba(var(--c-grey-900), 0.14);
 
   --font-family-serif: system-ui, -apple-system, 'Inter', serif;
 
@@ -66,9 +144,14 @@
 
   --font-text-label: var(--font-weight-medium) var(--font-size-12px) / var(--line-height-16px) var(--font-family-serif);
 
-  --font-button-giant: var(--font-weight-semi-bold) var(--font-size-18px) / var(--line-height-24px) var(--font-family-serif);
-  --font-button-large: var(--font-weight-semi-bold) var(--font-size-16px) / var(--line-height-20px) var(--font-family-serif);
-  --font-button-medium: var(--font-weight-semi-bold) var(--font-size-14px) / var(--line-height-16px) var(--font-family-serif);
-  --font-button-small: var(--font-weight-semi-bold) var(--font-size-12px) / var(--line-height-16px) var(--font-family-serif);
-  --font-button-tiny: var(--font-weight-semi-bold) var(--font-size-10px) / var(--line-height-12px) var(--font-family-serif);
+  --font-button-giant: var(--font-weight-semi-bold) var(--font-size-18px) / var(--line-height-24px)
+    var(--font-family-serif);
+  --font-button-large: var(--font-weight-semi-bold) var(--font-size-16px) / var(--line-height-20px)
+    var(--font-family-serif);
+  --font-button-medium: var(--font-weight-semi-bold) var(--font-size-14px) / var(--line-height-16px)
+    var(--font-family-serif);
+  --font-button-small: var(--font-weight-semi-bold) var(--font-size-12px) / var(--line-height-16px)
+    var(--font-family-serif);
+  --font-button-tiny: var(--font-weight-semi-bold) var(--font-size-10px) / var(--line-height-12px)
+    var(--font-family-serif);
 }
