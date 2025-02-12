@@ -1,0 +1,113 @@
+.button {
+  display: inline-flex;
+  color: var(--c-text-primary-white);
+  background-color: var(--c-text-accent);
+  cursor: pointer;
+
+  &:not(:disabled) {
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  &.giant {
+    padding: 1rem 3rem;
+    border-radius: 0.75rem;
+    font: var(--font-button-giant);
+  }
+  
+  &.large {
+    padding: 0.875rem 2.75rem;
+    border-radius: 0.75rem;
+    font: var(--font-button-large);
+  }
+  
+  &.medium {
+    padding: 0.75rem 2.25rem;
+    border-radius: 0.75rem;
+    font: var(--font-button-medium);
+  }
+  
+  &.small {
+    padding: 0.5rem 2.25rem;
+    border-radius: 0.5rem;
+    font: var(--font-button-small);
+  }
+  
+  &.tiny {
+    padding: 0.375rem 1.5rem;
+    border-radius: 0.5rem;
+    font: var(--font-button-tiny);
+  }
+
+  &.outlined {
+    background-color: transparent;
+    color: var(--c-text-accent);
+    border: 1.5px solid var(--c-text-accent);
+
+    &:hover {
+      background-color: var(--c-primary-50);
+    }
+
+    &:focus {
+      background-color: transparent;
+      box-shadow: 0px 0px 0px 3px var(--c-primary-200);
+      outline: none;
+    }
+
+    &:active {
+      background-color: var(--c-primary-100);
+    }
+
+    &:disabled {
+      background-color: transparent;
+      box-shadow: none;
+      color: var(--c-text-disabled);
+      border: 1.5px solid var(--c-grey-200);
+    }
+  }
+
+  &.text {
+    background-color: transparent;
+    color: var(--c-text-accent);
+
+    &:hover {
+      background-color: var(--c-primary-50);
+    }
+
+    &:focus {
+      background-color: transparent;    
+      box-shadow: 0px 0px 0px 3px var(--c-primary-200);
+      outline: none;
+    }
+
+    &:active {
+      background-color: var(--c-primary-100);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      pointer-events: auto;
+      color: var(--c-text-disabled);
+    }
+  }
+
+  &:hover {
+    background-color: var(--c-primary-700);
+  }
+
+  &:focus {
+    background-color: var(--c-primary-600);
+    outline: 3px solid var(--c-primary-200);
+  }
+
+  &:active {
+    background-color: var(--c-primary-800);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: auto;
+    color: var(--c-text-disabled);
+    background-color: var(--c-grey-200);
+  }
+}
+

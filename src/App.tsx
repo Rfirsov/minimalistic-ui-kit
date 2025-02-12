@@ -1,5 +1,8 @@
 import reactLogo from './assets/react.svg';
 import viteLogo from './assets/vite.svg';
+import Button from '../lib/components/Button';
+// import { Icon } from '../lib/components/Icons';
+import '../lib/styles/main.css';
 import './App.css';
 
 function App() {
@@ -14,11 +17,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
+      <Button labelText="example" size="giant" variant="text" />
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
     </>
   );
