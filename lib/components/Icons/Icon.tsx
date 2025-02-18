@@ -4,29 +4,18 @@ import { Icons } from './Icons';
 export type IconName = keyof typeof Icons;
 
 interface IconProps extends HTMLAttributes<HTMLDivElement> {
-  icon: IconName;
-  className?: string;
+  name: IconName;
 }
 
-export const Icon = ({ icon, className, ...rest }: IconProps) => {
-  const SvgIcon = useMemo(() => Icons[`${icon}`], [icon]);
+export const Icon = ({ name, ...rest }: IconProps) => {
+  const SvgIcon = useMemo(() => Icons[`${name}`], [name]);
 
   if (!SvgIcon) return null;
 
   return (
-    <div
-      className={className}
-      aria-label={icon}
-      role="img"
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-      {...rest}
-    >
+    <div className="icon" aria-label={name} role="img" {...rest}>
       <Suspense fallback={null}>
-        <SvgIcon />
+        <SvgIcon width="100%" height="100%" />
       </Suspense>
     </div>
   );
