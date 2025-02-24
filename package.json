@@ -81,5 +81,8 @@
   },
   "sideEffects": [
     "**/*.css"
-  ]
+  ],
+  "dependencies": {
+    "classnames": "^2.5.1"
+  }
 }

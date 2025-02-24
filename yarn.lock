@@ -2889,6 +2889,11 @@ chromatic@^11.15.0:
   resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-11.24.0.tgz#8cb6f07833651d98559fd72116b14fe525be62a9"
   integrity sha512-IocIxnxera27bRA51HHtfV9/Daqgj0E4BWYV12/nlf7qPJW1T82raQ5ypxZDJA4bXQywxOzpG2e6WWYvz/AwHA==
 
+classnames@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.5.1.tgz#ba774c614be0f016da105c858e7159eae8e7687b"
+  integrity sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==
+
 cli-cursor@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/cli-cursor/-/cli-cursor-5.0.0.tgz#24a4831ecf5a6b01ddeb32fb71a4b2088b0dce38"
