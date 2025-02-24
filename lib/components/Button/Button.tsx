@@ -1,5 +1,7 @@
 import { ReactElement } from 'react';
 import styles from './Button.module.css';
+import classNames from 'classnames/bind';
+const cn = classNames.bind(styles);
 
 // Base interface with common props
 interface ButtonPropsBase {
@@ -33,18 +35,16 @@ const Button = ({
   ...rest
 }: ButtonPropsWithLabel | ButtonPropsWithoutLabel) => {
   labelText = labelText?.trim();
-  const sizeClass = styles[`${size}`];
-  const variantClass = variant === 'contained' ? '' : styles[`${variant}`];
 
   return (
     <button
-      className={`${styles.button} ${sizeClass} ${variantClass} ${labelText ? '' : styles.noLabelText}`}
+      className={cn('button', [size], [variant], { noLabelText: !labelText, disabled })}
       onClick={onClick}
       disabled={disabled}
       {...rest}
     >
       {iconLeft}
-      {labelText && <span className={styles.label}>{labelText}</span>}
+      {labelText && <span className={cn('label')}>{labelText}</span>}
       {iconRight}
     </button>
   );

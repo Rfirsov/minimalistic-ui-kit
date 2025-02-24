@@ -6,7 +6,7 @@
   cursor: pointer;
   border-radius: 0.75rem;
 
-  :global(.icon) {
+  .icon {
     width: 1.5rem;
     height: 1.5rem;
   }
@@ -81,7 +81,7 @@
       padding: 0.25rem;
     }
 
-    :global(.icon) {
+    .icon {
       width: 1rem;
       height: 1rem;
     }
