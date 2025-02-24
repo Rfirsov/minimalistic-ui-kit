@@ -5,6 +5,7 @@ const cn = classNames.bind(styles);
 
 // Base interface with common props
 interface ButtonPropsBase {
+  className?: string;
   onClick?: () => void;
   size?: Size;
   variant?: ButtonVariant;
@@ -32,13 +33,14 @@ const Button = ({
   iconLeft,
   iconRight,
   disabled,
+  className,
   ...rest
 }: ButtonPropsWithLabel | ButtonPropsWithoutLabel) => {
   labelText = labelText?.trim();
 
   return (
     <button
-      className={cn('button', [size], [variant], { noLabelText: !labelText, disabled })}
+      className={cn('button', [size], [variant], { noLabelText: !labelText, disabled }, className)}
       onClick={onClick}
       disabled={disabled}
       {...rest}
