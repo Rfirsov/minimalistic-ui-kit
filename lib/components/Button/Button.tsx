@@ -5,7 +5,8 @@ const cn = classNames.bind(styles);
 
 // Base interface with common props
 interface ButtonPropsBase {
-  className?: string;
+  parentClassName?: 'button';
+  customClassName?: string;
   onClick?: () => void;
   size?: Size;
   variant?: ButtonVariant;
@@ -25,6 +26,8 @@ interface ButtonPropsWithoutLabel extends ButtonPropsBase {
   iconRight?: undefined;
 }
 
+type ButtonProps = ButtonPropsWithLabel | ButtonPropsWithoutLabel;
+
 const Button = ({
   labelText,
   onClick,
@@ -33,14 +36,15 @@ const Button = ({
   iconLeft,
   iconRight,
   disabled,
-  className,
+  parentClassName,
+  customClassName,
   ...rest
-}: ButtonPropsWithLabel | ButtonPropsWithoutLabel) => {
+}: ButtonProps) => {
   labelText = labelText?.trim();
 
   return (
     <button
-      className={cn('button', [size], [variant], { noLabelText: !labelText, disabled }, className)}
+      className={cn('button', size, variant, { noLabelText: !labelText, disabled }, parentClassName, customClassName)}
       onClick={onClick}
       disabled={disabled}
       {...rest}

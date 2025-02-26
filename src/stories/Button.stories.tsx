@@ -44,6 +44,14 @@ const meta = {
       control: 'boolean',
       description: 'Whether the button is disabled',
     },
+    parentClassName: {
+      control: 'text',
+      description: 'The parent class name of the button use with ButtonGroup',
+    },
+    customClassName: {
+      control: 'text',
+      description: 'The custom class name of the button',
+    },
   },
   parameters: {
     layout: 'centered',
