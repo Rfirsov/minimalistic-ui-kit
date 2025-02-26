@@ -8,7 +8,7 @@ interface ButtonPropsBase {
   parentClassName?: 'button';
   customClassName?: string;
   onClick?: () => void;
-  size?: Size;
+  size?: ButtonSize;
   variant?: ButtonVariant;
   disabled?: boolean;
 }
