@@ -46,7 +46,7 @@ const Input = ({
         </label>
       )}
       <div className={cn('inputContainer', { withIcon: iconLeft })}>
-        {iconWithProps(iconLeft as ReactElement, cn('customIcon'))}
+        {iconLeft && iconWithProps(iconLeft as ReactElement, cn('customIcon'))}
         <input
           id={inputId}
           className={cn('input')}
