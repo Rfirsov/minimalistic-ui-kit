@@ -1,0 +1,137 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+
+  .label {
+    font: var(--font-text-b2);
+    color: var(--c-text-primary-black);
+  }
+
+  &.outlined .inputContainer .input {
+    background-color: transparent;
+  }
+
+  /* InputSize */
+
+  &.large .inputContainer .input {
+    font: var(--font-text-b1);
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+  }
+
+  .inputContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &.withIcon {
+      .customIcon {
+        position: absolute;
+        left: 0.75rem;
+        pointer-events: none;
+        color: var(--c-text-grey);
+      }
+
+      .input {
+        padding-left: 3rem;
+      }
+    }
+  }
+
+  .input {
+    min-width: 80px;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    font: var(--font-text-b2);
+    color: var(--c-text-primary-black);
+    border-radius: 0.5rem;
+    border: 1.5px solid var(--c-grey-200);
+    background-color: var(--c-grey-50);
+    transition: background-color 0.2s ease-in-out;
+
+    &::placeholder {
+      color: var(--c-text-grey);
+    }
+
+    &:hover {
+      background-color: var(--c-grey-100);
+      border-color: var(--c-grey-400);
+    }
+
+    &:focus {
+      background-color: var(--c-primary-50);
+      border-color: var(--c-primary);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: var(--c-text-disabled);
+      border-color: var(--c-grey-200);
+      background-color: var(--c-grey-50);
+    }
+  }
+
+  .message {
+    font: var(--font-text-b3);
+    color: var(--c-text-grey);
+  }
+
+  /* InputState */
+  &.success {
+    .input {
+      background-color: var(--c-blue-50);
+      border-color: var(--c-success);
+    }
+    .inputContainer .customIcon {
+      color: var(--c-icon-success);
+    }
+    .message {
+      color: var(--c-text-success);
+    }
+  }
+
+  &.error {
+    .input {
+      background-color: var(--c-red-50);
+      border-color: var(--c-error);
+    }
+    .inputContainer .customIcon {
+      color: var(--c-icon-error);
+    }
+    .message {
+      color: var(--c-text-error);
+    }
+  }
+
+  &.warning {
+    .input {
+      background-color: var(--c-yellow-50);
+      border-color: var(--c-warning);
+    }
+    .inputContainer .withIcon {
+      .customIcon {
+        color: var(--c-icon-warning);
+      }
+    }
+    .message {
+      color: var(--c-text-warning);
+    }
+  }
+
+  &.info {
+    .input {
+      background-color: var(--c-blue-50);
+      border-color: var(--c-info);
+    }
+    .inputContainer .customIcon {
+      color: var(--c-icon-info);
+    }
+    .message {
+      color: var(--c-text-info);
+    }
+  }
+}

@@ -95,11 +95,22 @@
 
   --c-text-accent: var(--c-primary-500);
   --c-text-primary-white: var(--c-white);
+  --c-text-primary-black: var(--c-grey-900);
+  --c-text-grey: var(--c-grey-400);
   --c-text-disabled: var(--c-grey-400);
+  --c-text-success: var(--c-success);
+  --c-text-warning: var(--c-warning);
+  --c-text-error: var(--c-error);
+  --c-text-info: var(--c-info);
 
   --c-icon-accent: var(--c-primary-500);
   --c-icon-white: var(--c-white);
   --c-icon-grey: var(--c-grey-400);
+  --c-icon-light-grey: var(--c-grey-300);
+  --c-icon-success: var(--c-success);
+  --c-icon-warning: var(--c-warning);
+  --c-icon-error: var(--c-error);
+  --c-icon-info: var(--c-info);
 
   --box-shadow-100: 0px 2px 4px -2px rgba(var(--c-grey-900), 0.12), 0px 4px 4px -2px rgba(var(--c-grey-900), 0.08);
   --box-shadow-200: 0px 4px 6px -4px rgba(var(--c-grey-900), 0.12), 0px 8px 8px -4px rgba(var(--c-grey-900), 0.08);
