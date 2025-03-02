@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import styles from './Button.module.css';
 import classNames from 'classnames/bind';
+import iconWithProps from '../Icons/IconWrapper';
 const cn = classNames.bind(styles);
 
 // Base interface with common props
@@ -41,6 +42,7 @@ const Button = ({
   ...rest
 }: ButtonProps) => {
   labelText = labelText?.trim();
+  const isTinySize = size === 'tiny';
 
   return (
     <button
@@ -49,9 +51,9 @@ const Button = ({
       disabled={disabled}
       {...rest}
     >
-      {iconLeft}
+      {isTinySize ? iconWithProps(iconLeft as ReactElement) : iconLeft}
       {labelText && <span className={cn('label')}>{labelText}</span>}
-      {iconRight}
+      {isTinySize ? iconWithProps(iconRight as ReactElement) : iconRight}
     </button>
   );
 };

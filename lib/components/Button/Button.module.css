@@ -6,11 +6,6 @@
   cursor: pointer;
   border-radius: 0.75rem;
 
-  .icon {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
   &:hover {
     background-color: var(--c-primary-700);
   }
@@ -79,11 +74,6 @@
 
     &.noLabelText {
       padding: 0.25rem;
-    }
-
-    .icon {
-      width: 1rem;
-      height: 1rem;
     }
   }
 
