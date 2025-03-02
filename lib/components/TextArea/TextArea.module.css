@@ -1,0 +1,99 @@
+.textAreaWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+
+  /* Variant: Outlined */
+  &.outlined .textArea {
+    background-color: transparent;
+  }
+
+  /* Size Variations */
+  &.large .textArea {
+    font: var(--font-text-b1);
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+  }
+}
+
+.label {
+  font: var(--font-text-b2);
+  color: var(--c-text-primary-black);
+}
+
+.textArea {
+  min-height: 40px;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font: var(--font-text-b3);
+  color: var(--c-text-primary-black);
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--c-grey-200);
+  background-color: var(--c-grey-50);
+  transition: background-color 0.2s ease-in-out;
+  resize: vertical;
+
+  &::placeholder {
+    color: var(--c-text-grey);
+  }
+
+  &:hover {
+    background-color: var(--c-grey-100);
+    border-color: var(--c-grey-400);
+  }
+
+  &:focus {
+    background-color: var(--c-primary-50);
+    border-color: var(--c-primary);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: var(--c-text-disabled);
+    border-color: var(--c-grey-200);
+    background-color: var(--c-grey-50);
+  }
+}
+
+.message {
+  font: var(--font-text-b3);
+  color: var(--c-text-grey);
+}
+
+.success .textArea {
+  background-color: var(--c-blue-50);
+  border-color: var(--c-success);
+}
+
+.success .message {
+  color: var(--c-text-success);
+}
+
+.error .textArea {
+  background-color: var(--c-red-50);
+  border-color: var(--c-error);
+}
+
+.error .message {
+  color: var(--c-text-error);
+}
+
+.warning .textArea {
+  background-color: var(--c-yellow-50);
+  border-color: var(--c-warning);
+}
+
+.warning .message {
+  color: var(--c-text-warning);
+}
+
+.info .textArea {
+  background-color: var(--c-blue-50);
+  border-color: var(--c-info);
+}
+
+.info .message {
+  color: var(--c-text-info);
+}
