@@ -21,8 +21,8 @@ type InputVariant = 'filled' | 'outlined';
 
 type InputState = 'default' | 'success' | 'error' | 'warning' | 'info';
 
-type ChipSize = 'medium' | 'small' | 'tiny';
+type BadgeAndChipSize = 'medium' | 'small' | 'tiny';
 
-type ChipVariant = 'contained' | 'outlined';
+type BadgeAndChipVariant = 'contained' | 'outlined';
 
-type ChipState = 'default' | 'success' | 'error' | 'warning' | 'info';
+type BadgeAndChipState = 'default' | 'success' | 'error' | 'warning' | 'info';
