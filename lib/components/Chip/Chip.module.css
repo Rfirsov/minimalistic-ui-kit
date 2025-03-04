@@ -1,0 +1,106 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: default;
+  user-select: none;
+  transition:
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+}
+
+/* Chip Variants */
+.contained {
+  color: var(--c-text-primary-white);
+  background-color: var(--c-primary);
+}
+
+.outlined {
+  background-color: var(--c-primary-50);
+  color: var(--c-text-accent);
+  
+  .closeButton:hover {
+    color: var(--c-grey-400);
+  }
+  
+  &.default {
+    border: 1.5px solid var(--c-primary);
+  }
+
+  &.success {
+    color: var(--c-text-success);
+    background-color: var(--c-green-50);
+  }
+
+  &.error {
+    color: var(--c-text-error);
+    background-color: var(--c-red-50);
+  }
+
+  &.warning {
+    color: var(--c-text-warning);
+    background-color: var(--c-yellow-50);
+  }
+
+  &.info {
+    color: var(--c-text-info);
+    background-color: var(--c-blue-50);
+  }
+}
+
+/* Size Variations */
+.medium {
+  height: 40px;
+  font: var(--font-button-medium);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+}
+
+.small {
+  height: 32px;
+  font: var(--font-button-small);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.tiny {
+  height: 24px;
+  font: var(--font-button-tiny);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-regular);
+  cursor: pointer;
+  padding: 0;
+
+  &:hover {
+    color: var(--c-grey-400);
+  }
+}
+
+/* Chip States */
+.success {
+  background-color: var(--c-success);
+  color: var(--c-text-primary-white);
+}
+
+.error {
+  background-color: var(--c-error);
+  color: var(--c-text-primary-white);
+}
+
+.warning {
+  background-color: var(--c-warning);
+  color: var(--c-text-primary-white);
+}
+
+.info {
+  background-color: var(--c-info);
+  color: var(--c-text-primary-white);
+}

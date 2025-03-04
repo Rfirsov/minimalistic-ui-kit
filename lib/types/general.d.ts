@@ -20,3 +20,9 @@ type InputType =
 type InputVariant = 'filled' | 'outlined';
 
 type InputState = 'default' | 'success' | 'error' | 'warning' | 'info';
+
+type ChipSize = 'medium' | 'small' | 'tiny';
+
+type ChipVariant = 'contained' | 'outlined';
+
+type ChipState = 'default' | 'success' | 'error' | 'warning' | 'info';
