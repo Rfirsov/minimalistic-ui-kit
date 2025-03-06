@@ -1,0 +1,71 @@
+.radioButton {
+  display: flex;
+  align-items: center;
+  font: var(--font-text-b1);
+  color: var(--c-text-primary-black);
+
+  &.rideSideButton {
+    flex-direction: row-reverse;
+  }
+
+  + .radioButton {
+    margin-top: 1rem;
+  }
+
+  &.disabled {
+    color: var(--c-text-disabled);
+  }
+}
+
+.radioInput {
+  appearance: none;
+  -webkit-appearance: none;
+
+  &:disabled + .radioCustom {
+    cursor: not-allowed;
+    user-select: none;
+    background-color: transparent;
+    border: 1.5px solid var(--c-grey-200);
+    color: var(--c-text-disabled);
+  }
+}
+
+.radioCustom {
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+  position: relative;
+  border: 1.5px solid var(--c-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &.rideSideButton {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+
+  &:hover {
+    background-color: var(--c-primary-50);
+  }
+}
+
+.radioInput:not(:disabled):checked + .radioCustom {
+  border-color: var(--c-primary);
+}
+
+.radioInput:checked + .radioCustom::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: var(--c-primary);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radioInput:checked:disabled + .radioCustom::before {
+  background-color: var(--c-grey-200);
+}
