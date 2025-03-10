@@ -1,0 +1,83 @@
+.switch {
+  display: flex;
+  font: var(--font-text-b1);
+  color: var(--c-text-primary-black);
+  align-items: center;
+
+  &.rideSideButton {
+    flex-direction: row-reverse;
+
+    .labelText {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+  }
+
+  .slider:hover {
+    background-color: var(--c-grey-300);
+  }
+
+  &.checked .slider {
+    background-color: var(--c-primary);
+    &:hover {
+      background-color: var(--c-primary-700);
+    }
+
+    &:before {
+      transform: translateX(20px);
+    }
+  }
+
+  &.disabled {
+    .labelText {
+      color: var(--c-text-disabled);
+    }
+
+    .slider {
+      cursor: not-allowed;
+      background-color: var(--c-grey-100);
+
+      &:hover {
+        background-color: var(--c-grey-100);
+      }
+    }
+  }
+}
+
+.switch input {
+  appearance: none;
+  -webkit-appearance: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.labelText {
+  margin-left: 1rem;
+}
+
+.slider {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  background-color: var(--c-grey-200);
+  transition: 0.4s;
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    border-radius: 50%;
+    background-color: var(--c-white);
+    transition: 0.4s;
+  }
+}
