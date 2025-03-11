@@ -1,0 +1,61 @@
+.progressContainer {
+  display: flex;
+  align-items: center;
+
+  &.rideSidePercentage {
+    flex-direction: row-reverse;
+
+    .progressLabel {
+      margin-left: 1rem;
+      margin-right: 0;
+    }
+  }
+
+  &.disabled {
+    .progressLabel {
+      color: var(--c-text-disabled);
+    }
+  }
+}
+
+.progress {
+  width: 100%;
+  height: 0.5rem;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &::-webkit-progress-bar {
+    background-color: var(--c-grey-100);
+    border-radius: 0.5rem;
+  }
+
+  &::-webkit-progress-value {
+    background-color: var(--c-primary);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    transition: width 0.4s ease-in-out;
+  }
+
+  &::-moz-progress-bar {
+    background-color: var(--c-primary);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    transition: width 0.4s ease-in-out;
+  }
+
+  &.completed::-webkit-progress-value {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  &.completed::-moz-progress-bar {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+}
+
+.progressLabel {
+  font: var(--font-text-b3);
+  color: var(--c-text-primary-black);
+  margin-right: 1rem;
+}
