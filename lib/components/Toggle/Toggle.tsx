@@ -1,6 +1,6 @@
+import { useId, useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Toggle.module.css';
-import { useState } from 'react';
 
 const cn = classNames.bind(styles);
 
@@ -14,6 +14,7 @@ interface ToggleProps {
 }
 
 const Toggle = ({ initial, onToggle, label, isRightSideButton, disabled, customClassName, ...rest }: ToggleProps) => {
+  const id = useId();
   const [isChecked, setIsChecked] = useState(initial);
   const handleToggle = () => {
     if (onToggle) onToggle();
@@ -24,17 +25,11 @@ const Toggle = ({ initial, onToggle, label, isRightSideButton, disabled, customC
       role="switch"
       aria-checked={isChecked}
       aria-disabled={disabled}
-      className={cn(
-        'switch',
-        { rideSideButton: isRightSideButton },
-        { checked: isChecked },
-        { disabled },
-        customClassName
-      )}
+      className={cn('switch', { rideSideButton: isRightSideButton, checked: isChecked, disabled }, customClassName)}
       {...rest}
     >
-      <label aria-label="Toggle" htmlFor="toggle" className={cn('slider')}>
-        <input id="toggle" type="checkbox" onChange={handleToggle} checked={isChecked} disabled={disabled} />
+      <label aria-label="Toggle" htmlFor={`toggle-${id}`} className={cn('slider')}>
+        <input id={`toggle-${id}`} type="checkbox" onChange={handleToggle} checked={isChecked} disabled={disabled} />
       </label>
       {label && <span className={cn('labelText')}>{label}</span>}
     </div>

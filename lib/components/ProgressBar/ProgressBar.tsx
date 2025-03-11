@@ -11,16 +11,16 @@ interface ProgressBarProps {
 }
 
 const ProgressBar = ({ progress, isRightSidePercentage, disabled, customClassName, ...rest }: ProgressBarProps) => {
-  const progressBarId = useId();
+  const id = useId();
   const clampedProgress = Math.min(100, Math.max(0, progress));
 
   return (
     <div className={cn('progressContainer', { rideSidePercentage: isRightSidePercentage, disabled }, customClassName)}>
-      <label htmlFor={`progress-bar-${progressBarId}`} className={cn('progressLabel')}>
+      <label htmlFor={`progress-bar-${id}`} className={cn('progressLabel')}>
         {clampedProgress}%
       </label>
       <progress
-        id={`progress-bar-${progressBarId}`}
+        id={`progress-bar-${id}`}
         aria-label="Progress bar"
         className={cn('progress', { completed: clampedProgress === 100 })}
         value={clampedProgress}
