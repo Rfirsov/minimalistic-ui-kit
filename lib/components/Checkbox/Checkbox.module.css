@@ -1,0 +1,66 @@
+.checkboxLabel {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  font: var(--font-text-b1);
+  color: var(--c-text-primary-black);
+
+  &.fullWidth {
+    display: flex;
+  }
+
+  &.rightSideCheckbox {
+    flex-direction: row-reverse;
+
+    .customCheckbox {
+      margin-left: 1rem;
+      margin-right: 0;
+    }
+  }
+
+  &.disabled {
+    color: var(--c-text-disabled);
+    cursor: not-allowed;
+
+    .customCheckbox {
+      cursor: not-allowed;
+      user-select: none;
+      background-color: transparent;
+      border-color: var(--c-grey-200);
+    }
+  }
+}
+
+.checkboxInput {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+
+  &:focus + .customCheckbox {
+    box-shadow: 0 0 0 3px var(--c-primary-200);
+  }
+}
+
+.customCheckbox {
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid var(--c-primary);
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--c-grey-100);
+  }
+}
+
+.checkboxInput:checked:not(:disabled) + .customCheckbox,
+.checkboxInput:indeterminate:not(:disabled) + .customCheckbox {
+  background-color: var(--c-primary);
+  color: var(--c-white);
+}
