@@ -96,6 +96,7 @@
   --c-text-accent: var(--c-primary-500);
   --c-text-primary-white: var(--c-white);
   --c-text-primary-black: var(--c-grey-900);
+  --c-text-secondary-dark-grey: var(--c-grey-500);
   --c-text-grey: var(--c-grey-400);
   --c-text-disabled: var(--c-grey-400);
   --c-text-success: var(--c-success);
