@@ -91,7 +91,7 @@
   &.outlined:focus,
   &.text:focus {
     background-color: transparent;
-    box-shadow: 0px 0px 0px 3px var(--c-primary-200);
+    box-shadow: var(--box-shadow-focus);
     outline: none;
   }
 

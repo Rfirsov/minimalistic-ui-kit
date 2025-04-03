@@ -113,6 +113,8 @@
   --c-icon-error: var(--c-error);
   --c-icon-info: var(--c-info);
 
+  --box-shadow-focus: 0px 0px 0px 3px var(--c-primary-200);
+
   --box-shadow-100: 0px 2px 4px -2px rgba(var(--c-grey-900), 0.12), 0px 4px 4px -2px rgba(var(--c-grey-900), 0.08);
   --box-shadow-200: 0px 4px 6px -4px rgba(var(--c-grey-900), 0.12), 0px 8px 8px -4px rgba(var(--c-grey-900), 0.08);
   --box-shadow-300: 0px 6px 8px -6px rgba(var(--c-grey-900), 0.12), 0px 8px 16px -6px rgba(var(--c-grey-900), 0.08);
