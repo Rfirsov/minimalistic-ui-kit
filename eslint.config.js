@@ -56,7 +56,7 @@ export default tseslint.config(
       'import/resolver': {
         typescript: {
           alwaysTryTypes: true,
-          project: './tsconfig.app.json',
+          project: './tsconfig.json',
         },
       },
       react: {

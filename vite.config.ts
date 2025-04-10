@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
+import checkerPlugin from 'vite-plugin-checker';
 import { extname, relative, resolve } from 'path';
 import dts from 'vite-plugin-dts';
 import { fileURLToPath } from 'node:url';
@@ -12,6 +13,9 @@ export default defineConfig({
   plugins: [
     svgr(),
     react(),
+    checkerPlugin({
+      typescript: true,
+    }),
     libInjectCss(),
     dts({
       tsconfigPath: resolve(__dirname, 'tsconfig.lib.json'),
