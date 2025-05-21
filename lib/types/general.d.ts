@@ -1,8 +1,10 @@
-type ButtonSize = 'tiny' | 'small' | 'medium' | 'large' | 'giant';
+type DefaultSize = 'tiny' | 'small' | 'medium' | 'large' | 'giant';
+type MLSize = 'medium' | 'large';
+type MSTSize = 'medium' | 'small' | 'tiny';
 
 type ButtonVariant = 'text' | 'outlined' | 'contained';
-
-type InputSize = 'medium' | 'large';
+type InputVariant = 'filled' | 'outlined';
+type BadgeAndChipVariant = 'contained' | 'outlined';
 
 type InputType =
   | 'text'
@@ -17,12 +19,4 @@ type InputType =
   | 'week'
   | 'month';
 
-type InputVariant = 'filled' | 'outlined';
-
-type InputState = 'default' | 'success' | 'error' | 'warning' | 'info';
-
-type BadgeAndChipSize = 'medium' | 'small' | 'tiny';
-
-type BadgeAndChipVariant = 'contained' | 'outlined';
-
-type BadgeAndChipState = 'default' | 'success' | 'error' | 'warning' | 'info';
+type DefaultState = 'default' | 'success' | 'error' | 'warning' | 'info';

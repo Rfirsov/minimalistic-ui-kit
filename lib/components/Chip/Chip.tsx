@@ -8,9 +8,9 @@ const cn = classNames.bind(styles);
 interface ChipProps {
   label: string;
   onClose?: () => void;
-  size?: BadgeAndChipSize;
+  size?: MSTSize;
   variant?: BadgeAndChipVariant;
-  chipState?: BadgeAndChipState;
+  chipState?: DefaultState;
   iconLeft?: ReactElement;
   customClassName?: string;
 }

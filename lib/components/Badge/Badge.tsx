@@ -6,9 +6,9 @@ import styles from './Badge.module.css';
 const cn = classNames.bind(styles);
 
 interface BadgeProps {
-  size?: BadgeAndChipSize;
+  size?: MSTSize;
   variant?: BadgeAndChipVariant;
-  badgeState?: BadgeAndChipState;
+  badgeState?: DefaultState;
   icon: ReactElement;
   customClassName?: string;
 }

@@ -7,9 +7,9 @@ const cn = classNames.bind(styles);
 interface InputProps {
   label?: string;
   type?: InputType;
-  size?: InputSize;
+  size?: DefaultSize;
   variant?: InputVariant;
-  inputState?: InputState;
+  inputState?: DefaultState;
   inputMessage?: string;
   iconLeft?: ReactElement;
   placeholder: string;
