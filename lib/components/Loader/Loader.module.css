@@ -1,0 +1,128 @@
+.loader {
+  display: inline-block;
+  position: relative;
+  border-width: 0.3125rem;
+  border-style: solid;
+  border-color: var(--c-primary) var(--c-primary) var(--c-primary) transparent;
+  border-radius: 50%;
+  animation: loader-rotation 1s linear infinite;
+
+  &.giant {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-width: 0.375rem;
+
+    &:before,
+    &:after {
+      left: 1px;
+      width: 0.375rem;
+      height: 0.375rem;
+    }
+
+    &:before {
+      top: 2px;
+    }
+
+    &:after {
+      bottom: 2px;
+    }
+  }
+
+  &.large {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.375rem;
+
+    &:before,
+    &:after {
+      left: 1px;
+      width: 0.375rem;
+      height: 0.375rem;
+    }
+
+    &:before {
+      top: 0px;
+    }
+
+    &:after {
+      bottom: 0px;
+    }
+  }
+
+  &.medium {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-width: 0.25rem;
+
+    &:before,
+    &:after {
+      left: 1px;
+      width: 0.25rem;
+      height: 0.25rem;
+    }
+
+    &:before {
+      top: 1px;
+    }
+
+    &:after {
+      bottom: 1px;
+    }
+  }
+
+  &.small {
+    width: 2rem;
+    height: 2rem;
+    border-width: 0.25rem;
+
+    &:before,
+    &:after {
+      left: 0px;
+      width: 0.25rem;
+      height: 0.25rem;
+    }
+
+    &:before {
+      top: 0px;
+    }
+
+    &:after {
+      bottom: 0px;
+    }
+  }
+
+  &.tiny {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-width: 0.25rem;
+
+    &:before,
+    &:after {
+      left: -1px;
+      width: 0.25rem;
+      height: 0.25rem;
+    }
+
+    &:before {
+      top: -1px;
+    }
+
+    &:after {
+      bottom: -1px;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    border-radius: 50%;
+    background: var(--c-primary);
+    position: absolute;
+  }
+}
+
+@keyframes loader-rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
