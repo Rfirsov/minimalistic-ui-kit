@@ -16,10 +16,13 @@ interface ToggleProps {
 const Toggle = ({ initial, onToggle, label, isRightSideButton, disabled, customClassName, ...rest }: ToggleProps) => {
   const id = useId();
   const [isChecked, setIsChecked] = useState(initial);
+  const [isFocused, setIsFocused] = useState(false);
+
   const handleToggle = () => {
     if (onToggle) onToggle();
     setIsChecked((prevChecked) => !prevChecked);
   };
+
   return (
     <div
       role="switch"
@@ -28,9 +31,17 @@ const Toggle = ({ initial, onToggle, label, isRightSideButton, disabled, customC
       className={cn('switch', { rideSideButton: isRightSideButton, checked: isChecked, disabled }, customClassName)}
       {...rest}
     >
-      <label aria-label="Toggle" htmlFor={`toggle-${id}`} className={cn('slider')}>
-        <input id={`toggle-${id}`} type="checkbox" onChange={handleToggle} checked={isChecked} disabled={disabled} />
-      </label>
+      <label aria-label="Toggle" htmlFor={`toggle-${id}`} className={cn('slider', { focused: isFocused })} />
+      <input
+        id={`toggle-${id}`}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
+        className={cn('switchInput')}
+        type="checkbox"
+        onChange={handleToggle}
+        checked={isChecked}
+        disabled={disabled}
+      />
       {label && <span className={cn('labelText')}>{label}</span>}
     </div>
   );

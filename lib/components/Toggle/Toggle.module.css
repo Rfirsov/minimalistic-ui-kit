@@ -44,7 +44,7 @@
   }
 }
 
-.switch input {
+.switchInput {
   appearance: none;
   -webkit-appearance: none;
   opacity: 0;
@@ -61,11 +61,8 @@
   width: 44px;
   height: 24px;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 12px;
+  inset: 0;
+  border-radius: 0.75rem;
   background-color: var(--c-grey-200);
   transition: 0.4s;
 
@@ -79,5 +76,9 @@
     border-radius: 50%;
     background-color: var(--c-white);
     transition: 0.4s;
+  }
+
+  &.focused {
+    box-shadow: var(--box-shadow-focus);
   }
 }
