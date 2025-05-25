@@ -39,7 +39,7 @@
   height: 0;
 
   &:focus + .customCheckbox {
-    box-shadow: 0 0 0 3px var(--c-primary-200);
+    box-shadow: var(--box-shadow-focus);
   }
 }
 
@@ -48,11 +48,13 @@
   height: 24px;
   border: 1.5px solid var(--c-primary);
   border-radius: 0.5rem;
-  margin-right: 1rem;
   transition: all 0.2s ease;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  place-items: center;
+
+  &.withLabel {
+    margin-right: 1rem;
+  }
 
   &:hover {
     background-color: var(--c-grey-100);

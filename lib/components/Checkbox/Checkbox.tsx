@@ -59,7 +59,7 @@ const Checkbox = ({
         className={cn('checkboxInput')}
         {...rest}
       />
-      <div className={cn('customCheckbox')}>
+      <div className={cn('customCheckbox', { withLabel: !!label })}>
         {isChecked && iconWithProps(<Icon name="Check" />, cn('medium'))}
         {isIndeterminate && !isChecked && iconWithProps(<Icon name="Minus" />, cn('medium'))}
       </div>
