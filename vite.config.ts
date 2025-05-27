@@ -7,12 +7,17 @@ import dts from 'vite-plugin-dts';
 import { fileURLToPath } from 'node:url';
 import { glob } from 'glob';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
+import ReactCompiler from 'babel-plugin-react-compiler';
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     svgr(),
-    react(),
+    react({
+      babel: {
+        plugins: [ReactCompiler],
+      },
+    }),
     checkerPlugin({
       typescript: true,
     }),
